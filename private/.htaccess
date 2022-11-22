@@ -1,0 +1,8 @@
+ErrorDocument 401 "/./errors/error401.html"
+ErrorDocument 404 "/./errors/error404.html"
+
+AuthType Basic
+AuthName "Veuillez entrer vos identifiants"
+AuthUserFile "/var/www/html/.htpasswd"
+Require valid-user
+Satisfy All

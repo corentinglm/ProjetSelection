@@ -1,0 +1,130 @@
+body {
+
+    background-color: #141414;
+    font-family: 'Montserrat', sans-serif;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+
+
+}
+
+
+footer {
+    display: flex;
+    padding: 10px 0;
+    background-color: #2b2b2b;
+    justify-content: space-around;
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+
+
+}
+
+
+.welcome .mainTitle {
+    color: white;
+    font-size: 9vw;
+    font-weight: 700;
+
+    display: flex;
+
+
+    width: 100%;
+
+    text-align: center;
+
+    justify-content: center;
+
+
+
+
+
+
+
+}
+
+.welcome .subtitle {
+    color: white;
+    font-size: 2.5vw;
+
+
+    text-align: center;
+    padding-top: 12%;
+
+
+
+
+}
+
+.button {
+    text-align: center;
+
+
+}
+
+.button a {
+
+    font-size: 28px;
+}
+
+
+.welcome .about {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 10%;
+
+}
+
+
+a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+.button a:hover {
+
+
+
+    color: magenta;
+    text-decoration: underline;
+}
+
+/* Responsive Smartphone */
+@media only screen and (max-width: 800px) {
+
+
+
+    .header2 {
+        display: none;
+    }
+
+
+
+    #switch {
+        display: none;
+
+    }
+
+    .mainTitle {
+        font-size: 10vw;
+    }
+
+    .welcome .about p {
+        font-size: 4vw;
+    }
+
+}

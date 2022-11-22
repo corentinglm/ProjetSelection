@@ -1,0 +1,2 @@
+ErrorDocument 401 "/errors/error401.html"
+ErrorDocument 404 "/errors/error404.html"
