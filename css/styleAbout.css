@@ -1,4 +1,4 @@
-body {
+body, html {
 
     background-color: #141414;
     font-family: 'Montserrat', sans-serif;
@@ -6,7 +6,10 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    
+    
+    
+    
 
     
 
@@ -29,6 +32,7 @@ footer{
     
 }
 
+
 footer ul{
     display: flex;
     gap:30px
@@ -36,7 +40,17 @@ footer ul{
     
 }
 
+.welcome a{
+    padding-top: 10%;
+    padding-left:10%;
+    font-size: 40px;
+    font-weight: 700;
+    
+}
 
+.buttons{
+    padding-top:10%;
+}
 
 
 .header2{
@@ -96,6 +110,18 @@ nav {
     
 }
 
+.subtitle {
+    color:white;
+    padding-left: 10%;
+    
+
+    font-size: 34px;
+    font-weight: 700;
+
+    
+    
+}
+
 .welcome{
     
     position: fixed;
@@ -146,11 +172,18 @@ nav {
     color:white;
     
     font-weight: 100;
-    font-size: 2.3vw;
+    font-size: 1.3vw;
+    max-width: 75%;
     
     
     
 }
+
+h1{
+    font-size: 40px;
+    color: white;
+}
+
 
 
 

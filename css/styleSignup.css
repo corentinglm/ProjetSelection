@@ -1,0 +1,16 @@
+body {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+
+    text-rendering: geometricPrecision;
+    background-color: #2b2b2b;
+
+    color: white;
+    overflow: hidden;
+
+}

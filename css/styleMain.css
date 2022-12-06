@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    
 
 
 
@@ -94,7 +94,7 @@ nav {
     color: white;
     padding-left: 10%;
     padding-top: 5%;
-
+    width:75vh;
     font-size: 5.5vw;
     font-weight: 700;
 

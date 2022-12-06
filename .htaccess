@@ -1,2 +1,11 @@
-ErrorDocument 401 "/errors/error401.html"
-ErrorDocument 404 "/errors/error404.html"
+ErrorDocument 401 "/errors/error401.php"
+ErrorDocument 404 "/errors/error404.php"
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI}

@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+
 
 
 
@@ -22,7 +22,7 @@ footer {
     color: white;
 
     position: absolute;
-    
+
     width: 100%;
 
 
@@ -211,37 +211,41 @@ html.dark-mode {
     color: white;
 }
 
-thead, tbody{
+thead,
+tbody {
     color: white;
 }
 
-.tableau{
-    border-collapse: collapse;
-    min-width: 400px;
-   
-    box-shadow: 0 5px 50px rgb(0,0,0,0.15);
+.tableau {
+    
+    min-width: 500px;
+
+    box-shadow: 0 5px 50px rgb(0, 0, 0, 0.15);
     cursor: pointer;
     margin: 50px auto;
     border: 2px solid white
-
 }
 
-thead tr{
+thead tr {
     background-color: black;
     text-align: left;
 
 }
 
-th,td{
-    padding:15px 20px;
+th,
+td {
+    
+    padding: 25px 10px;
 }
 
-tbody tr,td,th{
+tbody tr,
+td,
+th {
     border: 1px solid #ddd;
 
 }
 
-.table b{
+.table b {
 
 
     font-size: 2vw;
@@ -251,15 +255,21 @@ tbody tr,td,th{
     display: flex;
 }
 
-.table a{
-    margin: 2vw 2vw;
-    font-size: 1.25vw;
-    
+.table a {
+    margin-left: 50px;
+    margin: 0.25vw 0.25vw;
+    font-size: 1vw;
+
 
 }
+#add{
+    
+    margin: 2vw 2vw;
+    font-size: 24px;
 
-.table a:hover{
-    color:magenta;
+}
+.table a:hover {
+    color: magenta;
     text-decoration: underline;
 
 }
@@ -269,19 +279,215 @@ tbody tr,td,th{
 
     .right .container .glance,
     .title,
-    .checkup
-    {
+    .checkup {
         font-size: 2vw;
-        
+
     }
 
-    header ul li a{
+    header ul li a {
         font-size: 2.5vh;
     }
 
-    
-    /* Responsive Smartphone */
-@media only screen and (max-width: 800px) {
 
-    /* a faire */
+    @media only screen and(max-width: 1000px) {
+        body {
+            background-color: red;
+        }
+
+
+        .mainTitle {
+            color: white;
+            padding-left: 2%;
+            padding-top: 5%;
+
+            font-size: 40px;
+            font-weight: 700;
+
+            width: 100%;
+
+        }
+
+
+        .logo {
+            display: none;
+        }
+
+
+
+
+        footer {
+            bottom: 0;
+            font-size: 10px;
+        }
+
+        .welcome {
+            height: fit-content;
+        }
+
+        .header2 {
+            display: none;
+        }
+
+        .navlinks {
+
+            color: red;
+
+
+        }
+
+        .actionList ul li a {
+            font-size: 20px;
+            padding-left: 2%;
+
+        }
+
+        .welcome .actionList ul h1 {
+            font-size: 28px;
+            padding-left: 2%;
+
+        }
+
+
+        .right .container .glance {
+            margin-bottom: 25px;
+            font-weight: 700;
+
+        }
+
+
+
+        .right .container {
+
+            font-size: 12px;
+        }
+
+        .right .container2 {
+            padding-top: 0%;
+            font-size: 12px;
+        }
+
+
+
+        .right .title {
+            font-weight: 500;
+        }
+
+        .right .buttonContinue {
+            font-size: 16px;
+            padding-top: 25px;
+        }
+
+        .right {
+            height: 100vh;
+            width: 100%;
+
+            padding-right: 20px;
+
+            color: white;
+
+            padding-top: 28vh;
+
+            border-left: 0px;
+            padding-left: 2%;
+
+            position: relative;
+
+
+
+        }
+
+        .actionList {
+            padding-bottom: 100px;
+        }
+
+        header .logo {
+            font-size: 13px;
+        }
+
+        header {
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #2b2b2b;
+
+        }
+
+        header .navlinks li a {
+            font-size: 7px;
+            gap: 3px;
+
+
+        }
+
+        #switch,
+        header input {
+            display: none;
+        }
+
+        header .logo {
+            display: none;
+        }
+
+
+
+        .navlinks {
+
+            list-style: none;
+            display: flex;
+            gap: 10px;
+
+
+        }
+
+
+
+
+
+        .navlinks li a {
+
+            font-size: 8px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .right .container .glance,
+        .title,
+        .checkup {
+            font-size: 30px;
+
+        }
+
+        header ul li a {
+            font-size: 25px;
+        }
+
+        .container2 .buttonContinue a,
+        .container .buttonContinue a {
+            font-size: 10px;
+
+
+        }
+
+        .container .buttonContinue {
+            font-size: 10px;
+            padding-bottom: 25px;
+
+
+        }
+
+        .glance {
+            font-size: 200px;
+        }
+
+        .checkup ul li {
+            font-size: 10px;
+        }
+
+
+    }
 }

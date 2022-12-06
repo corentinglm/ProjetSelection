@@ -36,7 +36,7 @@
         </div>
 
         <div class="button">
-            <a href="index.html">Cliquez ici pour retourner à l'écran de connexion</a>
+            <a href="../">Cliquez ici pour retourner à l'écran de connexion</a>
         </div>
 
 
@@ -48,7 +48,7 @@
 
 
 
-    <footer>Egnom 2022-23
+    <footer>Egnom 2022-23 - corentin.guillaume
 
     </footer>
 

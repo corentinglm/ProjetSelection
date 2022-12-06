@@ -17,42 +17,42 @@
 
 <body>
 
-    
 
-    
+
+    <!-- Error Handling  -->
 
     <div class="welcome">
-      
-        <div class="subtitle">Erreur</div>
-        <div class="mainTitle">401 Unauthorized.</div>
+
+        <div class="subtitle">Info</div>
+        <div class="mainTitle">In dev.</div>
 
         <div class="about">
-            <p>Vous n'avez pas la permission d'accéder à cette page</p>
-            
+            <p>Cette page est en cours de développement.</p>
 
-          
-           
+
+
+
 
         </div>
 
         <div class="button">
-            <a href="index.html">Vous êtes perdu? Cliquez ici pour retrouver votre chemin.</a>
+            <a href="../">Cliquez ici pour retourner au menu.</a>
         </div>
 
-      
+
 
     </div>
-    
-   
+
+
     </section>
 
-    
 
-        <footer>Egnom 2022-23 
-            
-        </footer>
 
-    
+    <footer>Egnom 2022-23 - corentin.guillaume
+
+    </footer>
+
+
 
 
 
