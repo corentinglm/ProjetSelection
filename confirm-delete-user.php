@@ -17,70 +17,81 @@
 
 <body>
 
-    <?php 
+    <?php
 
     session_start();
+
+    // SecuritySystem
+
+    if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
+        header('location: ../login');
+        exit();
+    }
+
+
 
     require_once("connection.php");
 
 
-    
+
     $sql = "SELECT * FROM users WHERE id=:id";
 
-    $res=$conn->prepare($sql);
-    $res->execute(array(':id'=>$_GET['id']));
+    $res = $conn->prepare($sql);
+    $res->execute(array(':id' => $_GET['id']));
 
 
 
     $data = $res->fetch(PDO::FETCH_ASSOC);
 
-    $complete_name = $data["prenom"]." ".$data["nom"];
+    $complete_name = $data["prenom"] . " " . $data["nom"];
 
-    if(!isset($data["ID"])){
+    if (!isset($data["ID"])) {
         //  si pas d'id alors on considère que la ligne n'existe pas alors on renvoie juste vers le menu pour "gérer" l'erreur, ouais bref
         header("location: make?action=see-accounts");
     }
 
     ?>
-    
+
 
     <div class="welcome">
         <div class="mainTitle">Confirmer la suppression?</div>
-        <div class="subtitle">Vous allez supprimer le compte <?php echo $complete_name; ?>, êtes vous sûr? </div>
-        
-        <div class="buttons"> 
-        <?php
+        <div class="subtitle">Vous allez supprimer le compte
+            <?php echo $complete_name; ?>, êtes vous sûr?
+        </div>
+
+        <div class="buttons">
+            <?php
         echo "<a href='delete-user?id={$_GET['id']}'>Confirmer</a>"
-        
-        ?>
-        
-        <a href="make?action=see-accounts">Retour</a>";
-        
-        </div>
-            
-        
-        
-        
 
-          
-           
+            ?>
+
+            <a href="make?action=see-accounts">Retour</a>";
 
         </div>
 
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
     </div>
-    
-    
-    
-    
-</section>
 
-    
-    
+
+
+
+
+
+    </div>
+
+
+
+
+    </section>
+
+
+
 
 
 

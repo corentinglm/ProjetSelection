@@ -5,6 +5,19 @@
 // requiring connection.php to connect to db
 require_once(".//connection.php");
 
+
+session_start();
+
+// SecuritySystem.
+
+
+    if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
+        header('location: ../login');
+        exit();
+    }
+
+
+
 if(isset($_GET['id'])){
     
     $id=$_GET["id"];

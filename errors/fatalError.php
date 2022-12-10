@@ -35,9 +35,7 @@
 
         </div>
 
-        <div class="button">
-            <a href="../">Bon, c'est pas grave, retournez donc au menu principal avant que je ne me fâche.</a>
-        </div>
+        
 
       
 

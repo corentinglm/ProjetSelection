@@ -16,49 +16,55 @@
 
 
 
-<?php 
+<?php
 
 // STARTING SESSION
 session_start();
+
+// SecuritySystem
+
+if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
+    header('location: ../login');
+    exit();
+}
+
 
 // including header
 include('homepages/admin/header.php');
 
 require_once('connection.php');
 
-if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
 
     $id = $_GET['id'];
 
     $sql = "SELECT * FROM users WHERE id=:id";
 
-    $res=$conn->prepare($sql);
-    $res->execute(array(':id'=>$id));
+    $res = $conn->prepare($sql);
+    $res->execute(array(':id' => $id));
 
-    
+
     $data = $res->fetchAll(PDO::FETCH_ASSOC);
 
 
     // creating values
 
     //  error handling: on check si le tableau est vide, si oui donc dans else, on repart dans see-accounts
-    if($data){
-    foreach($data as $v){
-        
-        $prenom = $v['prenom'];
-        $nom = $v['nom'];
-        $user = $v['username'];
-        $password = $v['password'];
-        $role = $v['role'];
-        $id = $v['ID'];
-        $complete_name = $v["prenom"]." ".$v["nom"];
+    if ($data) {
+        foreach ($data as $v) {
 
-    }} else{
+            $prenom = $v['prenom'];
+            $nom = $v['nom'];
+            $user = $v['username'];
+            $password = $v['password'];
+            $role = $v['role'];
+            $id = $v['ID'];
+            $complete_name = $v["prenom"] . " " . $v["nom"];
+
+        }
+    } else {
         header('location: make?action=see-accounts');
     }
-    
-
-    
 
 
 
@@ -70,7 +76,10 @@ if(isset($_GET['id'])){
 
 
 
-} else{
+
+
+
+} else {
     header('location: make?action=see-table');
 }
 
@@ -80,12 +89,14 @@ if(isset($_GET['id'])){
 
 <body>
 
- 
+
 
     <div class="menu">
 
 
-        <b>Modification du compte <?php echo ": ".$complete_name ?></b>
+        <b>Modification du compte
+            <?php echo ": " . $complete_name ?>
+        </b>
         <a href="make?action=see-accounts">Retour</a>
 
 
@@ -103,27 +114,28 @@ if(isset($_GET['id'])){
                     <p>Nom d'utilisateur</p>
 
                     <input type="text" <?php echo "value={$user}"; ?> name="username">
-                
 
-            </div>
 
-            <div class="title">
+                </div>
+
+                <div class="title">
                     <p>ID</p>
 
-                    <input type="text" id="country" name="ID" <?php echo "value={$id}";?> readonly >
-                
+                    <input type="text" id="country" name="ID" <?php echo "value={$id}"; ?> readonly >
 
-            </div>
 
-            <div class="title">
+                </div>
+
+                <div class="title">
                     <p>Mot de passe ( Impossible de le modifier. )</p>
-                    <input type="text" placeholder="mot de passe"<?php echo "value={$password}" ?>  name="password" readonly>
-                
+                    <input type="text" placeholder="mot de passe" <?php echo "value={$password}" ?> name="password"
+                    readonly>
 
-            </div>
-            <div class=" title">
-                
-            
+
+                </div>
+                <div class=" title">
+
+
                     <p>Rôle</p>
 
                     <?php
@@ -131,22 +143,22 @@ if(isset($_GET['id'])){
                     // coche en fonction du role $role
                     // à refaire pour le modify-eleve-account mais en plus gros
                     //? refaire avec un switch case dans la partie elève
-
-                    if($role == 'admin'){
+                    
+                    if ($role == 'admin') {
                         echo '<span>Admin<input checked type="radio" name="role" value="admin" id=""></span>';
-                    }else{
+                    } else {
                         echo '<span>Admin<input type="radio" name="role" value="admin" id=""></span>';
                     }
 
-                    if($role == 'secretaire'){
+                    if ($role == 'secretaire') {
                         echo '<span>Secrétaire<input checked type="radio" name="role" value="secretaire" id=""></span>';
-                    }else{
+                    } else {
                         echo '<span>Secrétaire<input type="radio" name="role" value="secretaire" id=""></span>';
                     }
 
-                    if($role == 'prof'){
+                    if ($role == 'prof') {
                         echo '<span>Correcteur<input checked type="radio" name="role" value="prof" id=""></span>';
-                    }else{
+                    } else {
                         echo '<span>Correcteur<input type="radio" name="role" value="prof" id=""></span>';
                     }
 

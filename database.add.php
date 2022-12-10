@@ -38,20 +38,13 @@ $remarques = $_POST['remarques']." "."( Ligne ajoutée par {$complete_name} )";
 
 $note = $_POST['note'];
 
-
-
-// TODO : changer bac en varchar
-
-
-
 // execute with values 
-
 
 try{
 $res->execute(array(':nom'=>$nom, ':prenom'=>$prenom,':bac'=>$bac,':travail'=>$travail,':absences'=>$absences,':attitude'=>$attitude,':etudes'=>$etudes,':avis_pp'=>$avis_pp,':avis_prov'=>$avis_prov,':lettre'=>$lettre,':remarques'=>$remarques,':note'=>$note, ));
 } catch(PDOException){
     header('location: ../make?action=see-table&error=empty');
-    quit();
+    exit();
 }
 
 

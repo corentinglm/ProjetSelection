@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    
+
 
 </head>
 
 <?php 
+
+// j'avais oublié le session start
+session_start();
+
+
+
 
 // PAGE INDEX: PAGES D'ACCUEUIL ET GERE LE SYSTEME DE LOGIN
 
@@ -20,14 +26,31 @@ require_once("connection.php");
 
 // * ça marche, vraiment ça marche, index redirige bien vers login si on est pas connecté, et elle include les bonnes pages si on se log, MA GNI FIQUE, beaucoup mieux avec cette structure "/login" 
 
-// affiche page liée au compte user
-session_start();
+
+
+
 
 
 //* gère le retour en arrière, si la session est déjà faite au niveau du role alors on affiche la page sans interroger le serveur. on exit() si toutes les conditions sont réunies
 // ! funfact: ça fait 3 jours que j'essaye de faire un autologin, je viens de le créer sans faire exprès lol 
 
-if(isset($_SESSION['role'])){
+// tableau avec les greetings, on évite la redudancy vu qu'on fait l'opération deux fois, avec l'autologin cookies, et le login classique 
+$greet = array('Quoi de neuf, ', 'Bonjour, ', 'Vous revoilà, ','Hey, ','Salut, ','Bon retour, ');
+
+// ACCUEIL PERSONNALISE POUR AUTOLOGIN UNIQUEMENT, encore une fois on fait dans le détail ( ça sert à rien je peaufine juste )
+if (isset($_COOKIE['surname']) && !isset($_SESSION['greetings'])) {
+
+    $_SESSION['greetings'] = $greet[array_rand($greet)] . $_COOKIE['surname'] . ' !';
+
+}
+
+// L'affichage des pages ne se fait que si la session existe et si elle est valide grâce a session_id()
+
+// Ici le système de sécurité est différent, pas de exit si la session n'est pas valide, on rajoute juste session == session_id()
+
+// Donc si la session existe et qu'elle est égale à la session id actuelle! on peut afficher les pages 
+
+if(isset($_SESSION['session']) && $_SESSION['session'] == session_id()){
     switch ($_SESSION['role']) {
         case 'secretaire';
      include("homepages/secretaire/header.php");
@@ -77,7 +100,7 @@ $res->execute(array(':username'=>$username));
 $data = $res->fetch(PDO::FETCH_ASSOC);
 
 
-
+//  verif du password et verif de l'username
 try{
 if($data['username'] == $username && password_verify($password,$data['password'])){
     //* Code to login
@@ -90,17 +113,30 @@ if($data['username'] == $username && password_verify($password,$data['password']
     setcookie('username', $data['username'], time() + (86400 * 30), "/");
     setcookie('role', $data['role'], time() + (86400 * 30), "/");
     setcookie('complete-name', $data['prenom'].' '. $data['nom'], time() + (86400 * 30), "/");
+    setcookie('surname', $data['prenom'], time() + (86400 * 30), "/");
     
     
 
     // creating sessions in order to keep informations 
+    
+    
     $_SESSION['id'] = $data['ID'];
     $_SESSION['username'] = $data['username'];
     $_SESSION['name'] = $data['nom'];
     $_SESSION['surname'] = $data['prenom'];
     $_SESSION['role'] = $data['role'];
     $_SESSION['complete-name'] = $data['prenom']. ' '. $data['nom'];
-    $_SESSION['status'] = 'OK';
+
+    // CREATION DU $_SESSION['session'] ESSENTIEL AU SYST DE SECURITE
+    // SERA COMPARE AU SESSION_ID DE L'USER POUR VERIFIER L'AUTHENTICITE DE LA SESSION.
+    
+    $_SESSION['session'] = session_id();
+
+    // greetings personnalisé, créé dans le login
+
+    
+    $_SESSION['greetings'] = $greet[array_rand($greet)] . $_SESSION['surname'] . ' !';
+    
 
     switch($data['role']){
     

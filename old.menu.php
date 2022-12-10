@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface</title>
     <link rel="stylesheet" href="css/reset.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,12 +16,21 @@
 
 <body>
 
-    
+
 
     <?php 
 
     // affiche page liée au compte user
     session_start();
+
+    
+
+    // SecuritySystem.
+
+    if(!isset($_SESSION['session']) or !$_SESSION['session'] == session_id()){
+        header('location: ../');
+        exit();
+    }
 
 
 if(isset($_POST["username"])){

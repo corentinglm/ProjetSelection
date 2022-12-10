@@ -15,6 +15,12 @@
 
 </head>
 
+<?php 
+
+
+
+?>
+
 <body>
 
     <header>
@@ -24,6 +30,7 @@
         <ul class="navlinks">
             
             <li><a href="../">Retour</a></li>
+            <li>Infinite Amethyst 1.0</li>
         </ul>
 
 
@@ -38,7 +45,7 @@
 
         <div class="about">
             
-        <h1>V1.0 Stable - The Final Update ( 09/12/2022 )</h1>
+        <h1>V1.0  - 'The Final Update'</h1>
         <p>
             <br>
             

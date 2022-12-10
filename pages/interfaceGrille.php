@@ -34,7 +34,10 @@ $data = $res->fetchAll(PDO::FETCH_ASSOC);
     <div class="table">
         <table class="tableau">
             
-            <b>Consulter, modifier ou supprimer mes grilles</b>
+            <b>Consulter, modifier ou supprimer mes grilles
+                <?php if (isset($_GET['error']) && $_GET['error'] == 'empty') {
+                    echo '(Erreur: Une ligne vide, au moins.)';}?>
+            </b>
                 
                 <a id="add" href="../make?action=new-row">Cliquez ici pour ajouter une nouvelle grille</a>
             <thead>

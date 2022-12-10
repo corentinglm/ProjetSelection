@@ -12,7 +12,6 @@ $data = $res->fetch(PDO::FETCH_ASSOC);
 
 $deadline = $data["deadline"];
 
-var_dump($_SESSION);
 
 ?>
 
@@ -20,7 +19,7 @@ var_dump($_SESSION);
 
 
 <div class="welcome">
-        <div class="mainTitle">Bienvenue, <?php echo $_SESSION["surname"] ?> </div>
+        <div class="mainTitle"><?php echo $_SESSION["greetings"]?></div>
 
         <div class="actionList">
 

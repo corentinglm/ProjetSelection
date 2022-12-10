@@ -23,7 +23,7 @@
 
     <div class="welcome">
 
-        <div class="subtitle">Info</div>
+        <div class="subtitle"></div>
         <div class="mainTitle">In dev.</div>
 
         <div class="about">

@@ -38,6 +38,6 @@ $role = $_SESSION['role'];
 
 </header>
 <div class="header2">
-    Vous êtes connecté sur votre espace personnel en tant que  <?php echo $_SESSION['complete-name']; echo " ($role)"; ?>
+    Vous êtes connecté.e sur votre espace personnel en tant que  <?php echo $_SESSION['complete-name']; echo " ($role)"; ?>
     <title>Espace personnel - <?php echo $_SESSION['complete-name'] ?> </title>
 </div>

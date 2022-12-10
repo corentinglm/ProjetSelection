@@ -1,8 +1,10 @@
 <?php 
 
 //  Handling Database Connection
+// SecuritySystem.
 
-$dbUsername = 'root';
+
+$dbUsername = 'guillaume';
 $dbPassword = 'guillaume1337';
 $dbserv = 'localhost';
 $dbName = "ProjetSelection";
@@ -13,5 +15,6 @@ $conn = new PDO("mysql:host=".$dbserv.";dbname=".$dbName,$dbUsername,$dbPassword
     header('location: ./errors/fatalError.php');
     exit();
 }
+
 
 ?> 

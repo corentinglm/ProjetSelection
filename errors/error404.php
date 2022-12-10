@@ -36,7 +36,7 @@
         </div>
 
         <div class="button">
-            <a href="../">Cliquez ici pour retourner à l'écran de connexion</a>
+            <a href="../">Cliquez ici pour retourner au menu.</a>
         </div>
 
 
