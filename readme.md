@@ -1,6 +1,8 @@
 Infinite Amethyst 1.0 ( The Final Update )
 by corentin guillaume - Sept. 2022 - Déc. 2022
 
+Enfin sur Git!
+
 IP ( Egnom ) : https://10.0.52.85/
 
 
