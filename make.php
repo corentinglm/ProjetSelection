@@ -14,7 +14,7 @@ if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
     exit();
 }
 
-/
+
 
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == 'admin' or $_SESSION['role'] == 'secretaire' or $_SESSION['role'] == 'prof') {

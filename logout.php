@@ -10,6 +10,6 @@ session_destroy();
 
 
 // redirection
-header("location: ../login?info=disconnected");
+header("location: login?info=disconnected");
 
 // done.

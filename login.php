@@ -8,7 +8,7 @@
     <title>Connexion - Infinite Amethyst</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="../scripts/splash.js" defer></script>
+    <script src="scripts/splash.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -164,7 +164,7 @@
 
 
                 <!-- la page principale n'est plus la page de login, mais index, index est la page de menu, mais redirige vers le login si l'user n'est pas connecté, j'exploiterais les sessions et cookies pour rester connecter, puis je ferais un système de login, et ce sera prêt, en ce qui concerne les différentes pages, je vais bricoler un peu un truc avec une méthode get -->
-                <form method="post" action="../">
+                <form method="post" action="./process.connection.php">
 
 
 
@@ -230,7 +230,7 @@
 
             <footer>
                 <div class="about">
-                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.1</a>
+                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.1.1</a>
 
 
                 </div>

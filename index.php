@@ -13,9 +13,8 @@
 
 session_start();
 
-// Refonte totale du système de login
+// Refonte totale du système de login, maintenant dans un fichier PHP à part.
 
-require('classes/users.php');
 
 
 // Session handler
@@ -45,53 +44,6 @@ if (isset($_SESSION['session'])) {
     }
     exit();
 }
-
-// Login system
-if (isset($_POST['username']) && isset($_POST['password'])) {
-
-    $password = $_POST['password'];
-    $username = $_POST['username'];
-
-    $login = (new Users())->passwordVerification($username, $password);
-    (new Users())->setCookies($username);
-
-
-    if ($login) {
-
-        $role = (new Users())->getRole($username);
-        (new Users)->createSession($username);
-        
-
-        switch ($role) {
-
-            case 'secretaire';
-                include("homepages/secretaire/header.php");
-                include("homepages/secretaire/body.php");
-                include("homepages/secretaire/footer.php");
-                break;
-
-            case 'admin';
-                include("homepages/admin/header.php");
-                include("homepages/admin/body.php");
-                include("homepages/admin/footer.php");
-                break;
-
-
-            case 'prof';
-                include("homepages/prof/header.php");
-                include("homepages/prof/body.php");
-                include("homepages/prof/footer.php");
-                break;
-        }
-    } else {
-        // Invalid Password
-        header('location: ../login?error=badPassword');
-    }
-} else {
-    // NO POST, redirect
-    header('location: ../login');
-}
-
 
 
 ?>

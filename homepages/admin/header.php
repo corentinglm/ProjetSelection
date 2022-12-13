@@ -26,12 +26,12 @@ $role = $_SESSION['role'];
 <div class="logo">Infinite Amethyst</div>
 
 <ul class="navlinks">
-    <li><a href="../">Accueil</a></li>
-    <li><a href="../make?action=see-accounts">Gérer les comptes</a></li>
-    <li><a href="../make?action=see-table">Gérer les grilles</a></li>
-    <li><a href="../make?action=see-ranking">Classement</a></li>
+    <li><a href="./">Accueil</a></li>
+    <li><a href="./make?action=see-accounts">Gérer les comptes</a></li>
+    <li><a href="./make?action=see-table">Gérer les grilles</a></li>
+    <li><a href="./make?action=see-ranking">Classement</a></li>
     
-    <li><a href="../logout.php">Déconnexion</a></li>
+    <li><a href="./logout.php">Déconnexion</a></li>
     
 </ul>
 

@@ -27,12 +27,12 @@ $role = $_SESSION['role'];
 
         <ul class="navlinks">
             
-            <li><a href="../">Accueil</a></li>
-            <li><a href="../make?action=see-table">Mes grilles</a></li>
-            <li><a href="../make?action=see-ranking">Mon classement</a></li>
+            <li><a href="./">Accueil</a></li>
+            <li><a href="./make?action=see-table">Mes grilles</a></li>
+            <li><a href="./make?action=see-ranking">Mon classement</a></li>
             
             
-            <li><a href="../logout.php">Déconnexion</a></li>
+            <li><a href="./logout.php">Déconnexion</a></li>
             
         </ul>
 

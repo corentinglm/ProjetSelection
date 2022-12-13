@@ -16,8 +16,15 @@ Infinite Amethyst 1.1
     - Le système est maintenant plus efficace et rapide, en utilisant moins de conditions
 
 - Ajout des classes:
-    - Les classes Users et Database gèrent intégralement le système de connexion, de gestion de cookies, et 
+    - Les classes Users et Database gèrent intégralement le système de connexion, de gestion de cookies
 
 
+Infinite Amethyst 1.1.1
+
+- Système de login délocalisé, maintenant dans process.connection.php
+
+Bug fixes :
+
+- Correction du bug dans lequel le message "Confirmez l'envoi du formulaire" apparaissait à chaque refresh du site.
 
 

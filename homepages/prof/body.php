@@ -93,8 +93,8 @@ $toComplete =  $totalEleve - count($data);
 
             <ul>
                 <h1>Accès rapide</h1>
-                <li><a href="../make?action=see-table">- Modifier mes grilles</a></li>
-                <li><a href="../make?action=see-ranking">- Accéder au classement</a></li>
+                <li><a href="./make?action=see-table">- Modifier mes grilles</a></li>
+                <li><a href="./make?action=see-ranking">- Accéder au classement</a></li>
                 
 
             </ul>
@@ -121,7 +121,7 @@ $toComplete =  $totalEleve - count($data);
             </div>
 
             <div class="buttonContinue">
-                <a href="../make?action=new-row">Continuer de compléter mes grilles</a>
+                <a href="./make?action=new-row">Continuer de compléter mes grilles</a>
             </div>
 
 
@@ -137,7 +137,7 @@ $toComplete =  $totalEleve - count($data);
             </div>
 
             <div class="buttonContinue">
-                <a href="../make?action=see-ranking">Consulter le classement</a>
+                <a href="./make?action=see-ranking">Consulter le classement</a>
             </div>
 
             <div class="title">Paramètres de mon compte</div>
