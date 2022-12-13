@@ -9,7 +9,7 @@
 $dbUsername = 'guillaume';
 $dbPassword = 'guillaume1337';
 $dbserv = 'localhost';
-$dbName = "ProjetSelection";
+$dbName = "projetselection";
 
 try {
     $conn = new PDO("mysql:host=" . $dbserv . ";dbname=" . $dbName, $dbUsername, $dbPassword);
