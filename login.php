@@ -230,7 +230,7 @@
 
             <footer>
                 <div class="about">
-                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.1</a>
+                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.1.1</a>
 
 
                 </div>

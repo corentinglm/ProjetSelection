@@ -27,6 +27,4 @@ Bug fixes :
 
 - Correction du bug dans lequel le message "Confirmez l'envoi du formulaire" apparaissait à chaque refresh du site.
 
--
-
 
