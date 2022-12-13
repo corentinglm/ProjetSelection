@@ -30,7 +30,7 @@
         <ul class="navlinks">
             
             <li><a href="../">Retour</a></li>
-            <li>Infinite Amethyst 1.1</li>
+            <li>Infinite Amethyst 1.1.1</li>
         </ul>
 
 
@@ -45,7 +45,7 @@
 
         <div class="about">
             
-        <h1>V1.1 - 'The Final Update'</h1>
+        <h1>V1.1.1 - 'The Final Update'</h1>
         <p>
             <br>
             

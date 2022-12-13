@@ -74,4 +74,6 @@ class Users
         setcookie('complete-name', $res['prenom'] . ' ' . $res['nom'], time() + (86400 * 30), "/");
         setcookie('surname', $res['prenom'], time() + (86400 * 30), "/");
     }
+
+    
 }

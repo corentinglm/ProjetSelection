@@ -1,5 +1,5 @@
-ErrorDocument 401 "/errors/error401.php"
-ErrorDocument 404 "/errors/error404.php"
+ErrorDocument 401 "/errors/error401"
+ErrorDocument 404 "/errors/error404"
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d

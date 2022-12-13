@@ -19,9 +19,11 @@
 
     <?php
 
-    // Je l'appelle dans le login, comme ça si il y a une erreur de base de données, le site est innacessible
-    // ouais c'est bon ça marche
-    require_once("connection.php");
+
+    // vérification de la database
+require('./classes/database.php');
+    new Database();
+
 
 
     ?>

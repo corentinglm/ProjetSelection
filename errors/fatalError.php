@@ -23,11 +23,11 @@
 
     <div class="welcome">
       
-        <div class="subtitle">Erreur fatale</div>
-        <div class="mainTitle">500 Internal Server Errror.</div>
+        <div class="subtitle">Erreur</div>
+        <div class="mainTitle">500 Internal Server Error.</div>
 
         <div class="about">
-            <p>Vous avez pété un truc vous, je le sens</p>
+            <p>Base de données injoignable.</p>
             
 
           
@@ -46,7 +46,7 @@
 
     
 
-        <footer>Egnom 2022-23 - corentin.guillaume
+        <footer>We'll be back soon!
             
         </footer>
 

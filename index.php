@@ -11,9 +11,15 @@
 
 <?php
 
+require('./classes/database.php');
 session_start();
 
 // Refonte totale du système de login, maintenant dans un fichier PHP à part.
+
+
+// On vérifie si la base de données est accessible
+new Database();
+
 
 
 
@@ -25,24 +31,26 @@ if (isset($_SESSION['session'])) {
             case 'secretaire';
                 include("homepages/secretaire/header.php");
                 include("homepages/secretaire/body.php");
-                include("homepages/secretaire/footer.php");
+                include("homepages/footer.php");
                 break;
 
             case 'admin';
                 include("homepages/admin/header.php");
                 include("homepages/admin/body.php");
-                include("homepages/admin/footer.php");
+                include("homepages/footer.php");
                 break;
 
 
             case 'prof';
                 include("homepages/prof/header.php");
                 include("homepages/prof/body.php");
-                include("homepages/prof/footer.php");
+                include("homepages/footer.php");
                 break;
         }
     }
     exit();
+} else{
+    header('location: ./login');
 }
 
 

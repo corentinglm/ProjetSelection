@@ -14,12 +14,13 @@ class Database
         try {
             $this->conn = new PDO("mysql:host=" . $this->dbserv . ";dbname=" . $this->dbName, $this->dbUsername, $this->dbPassword);
         } catch (PDOException $e) {
-            echo utf8_encode($e->getMessage());
+            include('./errors/fatalError.php');
             die();
         }
     }
 
-    public function getConnex(){
+    public function getConnex()
+    {
         return $this->conn;
     }
 }
