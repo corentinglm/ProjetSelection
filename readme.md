@@ -1,5 +1,5 @@
 # Infinite Amethyst ( The Final Update )
-# by corentin guillaume - Sept. 2022 - Déc. 2022
+by corentin guillaume - Sept. 2022 - Déc. 2022
 
 IP ( Egnom ) : https://10.0.52.85/
 Base de données incluse dans le dossier
