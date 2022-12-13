@@ -12,7 +12,7 @@ $data = $res->fetch(PDO::FETCH_ASSOC);
 
 $deadline = $data["deadline"];
 
-var_dump($_SESSION);
+
 
 ?>
 
@@ -27,7 +27,7 @@ var_dump($_SESSION);
 
             <ul>
                 <h1>Accès rapide</h1>
-                <li><a href="make?action=download-ranking">- Accéder au classement </a></li>
+                <li><a href="./make?action=download-ranking">- Accéder au classement </a></li>
                 
             </ul>
 
@@ -55,7 +55,7 @@ var_dump($_SESSION);
             </div>
 
             <div class="buttonContinue">
-                <a href="make?action=download-ranking">Voir le classement</a>
+                <a href="./make?action=download-ranking">Voir le classement</a>
             </div>
 
 
@@ -74,8 +74,7 @@ var_dump($_SESSION);
 
             </div>
 
-            <div class="title">Paramètre de mon compte</div>
-            <div class="buttonContinue"><a href="">Gérer mon compte</a></div>
+           
         
         </div>
     </section>
