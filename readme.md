@@ -16,7 +16,7 @@ Infinite Amethyst 1.1
     - Le système est maintenant plus efficace et rapide, en utilisant moins de conditions
 
 - Ajout des classes:
-    - Les classes Users et Database gèrent intégralement le système de connexion, de gestion de cookies, et 
+    - Les classes Users et Database gèrent intégralement le système de connexion, de gestion de cookies
 
 
 
