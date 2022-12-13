@@ -14,6 +14,6 @@ $dbName = "projetselection";
 try {
     $conn = new PDO("mysql:host=" . $dbserv . ";dbname=" . $dbName, $dbUsername, $dbPassword);
 } catch (PDOException $e) {
-    header('location: ./errors/fatalError.php');
+    include('./errors/fatalError.php');
     exit();
 }
