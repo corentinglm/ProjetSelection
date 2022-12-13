@@ -22,76 +22,76 @@
         <div class="logo">ProjetSelection</div>
 
         <ul class="navlinks">
-            
+
             <li><a href="about.html">Retour</a></li>
         </ul>
 
 
     </header>
 
-    
+
 
     <div class="welcome">
         <div class="mainTitle">Changelog.</div>
 
         <div class="about">
-           <h1>Version Finale 1.0:</h1>
-           <h2>Ajouts:</h2>
+            <h1>Version Finale 1.0:</h1>
+            <h2>Ajouts:</h2>
             <ul>
                 <li>- Ajout du Responsive Design.</li>
                 <li>- Ajout des pages "Espace perso Admin, Prof, Secrétaire".</li>
                 <li>- Ajout du Dark Mode.</li>
                 <li>- Ajout de la page "Changelog"</li>
-                
-                
-                
-                
-  
+
+
+
+
+
             </ul>
             <h2>Bugfixes:</h2>
             <ul>
                 <li>- Correction d'un bug dans lequel il était impossible de scroll dans la page Changelog</li>
-                
-                
+
+
             </ul>
 
-            
-            
 
-            
 
-          
-           
+
+
+
+
+
 
         </div>
         <a href="about.html">Retour vers "A propos"</a>
-        
 
-     
+
+
         <h2>Infographie V1.0</h2>
 
     </div>
 
     <div class="img"><img src="assets/changelog1.0.png" alt=""></div>
-    
-    
-   
-    
+
+
+
+
 
     </section>
-    
-    
 
-        <footer>Egnom 2022-23 >>> DEBUG
-            <ul>
-                <li><a href="main.html">Page Prof</a></li>
-                <li><a href="mainAdmin.html">Page Admin</a></li>
-                <li><a href="mainSecretaire.html">Page Secrétaire</a></li>
 
-            </ul>
-        </footer>
 
-    
+    <footer>Egnom 2022-23 >>> DEBUG
+        <ul>
+            <li><a href="main.html">Page Prof</a></li>
+            <li><a href="mainAdmin.html">Page Admin</a></li>
+            <li><a href="mainSecretaire.html">Page Secrétaire</a></li>
+
+        </ul>
+    </footer>
+
+
 
 
 

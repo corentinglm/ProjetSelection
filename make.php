@@ -9,10 +9,12 @@ session_start();
 // SecuritySystem
 
 
-if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
+if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
     header('location: ../login');
     exit();
 }
+
+/
 
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == 'admin' or $_SESSION['role'] == 'secretaire' or $_SESSION['role'] == 'prof') {
@@ -41,12 +43,6 @@ if (isset($_SESSION['role'])) {
                         include("./homepages/prof/header.php");
                         include("./pages/interfaceClassement.php");
                         break;
-
-
-
-
-
-
                 }
             }
 
@@ -97,9 +93,7 @@ if (isset($_SESSION['role'])) {
                         include("./homepages/secretaire/header.php");
                         include("./pages/interfaceClassementSecretaire.php");
                         break;
-
                 }
-
             }
 
 

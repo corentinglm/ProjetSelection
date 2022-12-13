@@ -13,4 +13,3 @@ session_destroy();
 header("location: ../login?info=disconnected");
 
 // done.
-?>

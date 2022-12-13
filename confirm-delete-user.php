@@ -23,7 +23,7 @@
 
     // SecuritySystem
 
-    if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
+    if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
         header('location: ../login');
         exit();
     }
@@ -61,7 +61,7 @@
 
         <div class="buttons">
             <?php
-        echo "<a href='delete-user?id={$_GET['id']}'>Confirmer</a>"
+            echo "<a href='delete-user?id={$_GET['id']}'>Confirmer</a>"
 
             ?>
 

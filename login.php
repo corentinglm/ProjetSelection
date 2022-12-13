@@ -17,14 +17,14 @@
 
 <body>
 
-<?php 
+    <?php
 
-// Je l'appelle dans le login, comme ça si il y a une erreur de base de données, le site est innacessible
-// ouais c'est bon ça marche
-require_once("connection.php"); 
+    // Je l'appelle dans le login, comme ça si il y a une erreur de base de données, le site est innacessible
+    // ouais c'est bon ça marche
+    require_once("connection.php");
 
 
-?>
+    ?>
 
 
     <body>
@@ -38,7 +38,7 @@ require_once("connection.php");
                     alert("Cannot be empty");
                     return false;
                 }
-            } 
+            }
         </script>
 
 
@@ -46,7 +46,7 @@ require_once("connection.php");
 
 
         // obtention des deux GET, info ou error
-        
+
         if (isset($_GET['error'])) {
             $get = $_GET['error'];
         } else {
@@ -62,7 +62,7 @@ require_once("connection.php");
 
 
         // J'ai eu des problèmes de session en double donc je vais considérer que si l'utilisateur attérit sur cette page c'est qu'il n'a pas de session et par conséquent on va la destroy pour etre bien sur
-        
+
         session_start();
         session_destroy();
 
@@ -95,15 +95,15 @@ require_once("connection.php");
                 // random greetings
                 // ça sert à rien mais, c'est plus humain.
                 // tout est dans le détail
-                
+
                 // si cookies alors message avec prénom
                 if (isset($_COOKIE['surname'])) {
 
-                    $greet = array('Vous êtes là, ', 'Bonjour, ', 'Vous revoilà, ','Allo, ','De retour, ');
+                    $greet = array('Vous êtes là, ', 'Bonjour, ', 'Vous revoilà, ', 'Allo, ', 'De retour, ');
 
                     $greet = $greet[array_rand($greet)] . $_COOKIE['surname'] . ' !';
-                
-                //  pas de cookies, message de base
+
+                    //  pas de cookies, message de base
                 } else {
 
 
@@ -119,23 +119,20 @@ require_once("connection.php");
                 <?php
                 if ($info == 'disconnected' && isset($_COOKIE['surname'])) {
                     $greet = array('Au revoir, ', 'Ciao, ', 'À plus, ');
-                    $greet = $greet[array_rand($greet)].$_COOKIE['surname'];
-                    
-                } elseif($info == 'disconnected' && !isset($_COOKIE['surname'])){
+                    $greet = $greet[array_rand($greet)] . $_COOKIE['surname'];
+                } elseif ($info == 'disconnected' && !isset($_COOKIE['surname'])) {
                     $greet = array('Au revoir!', 'Ciao!', 'À plus!');
                     $greet = $greet[array_rand($greet)];
-                    
                 }
 
-                if(isset($_GET['error']) && $_GET['error'] == 'badPassword'){
-                    
-                        $greet = array('Loupé..','Oh...','Raté..','Navrant..','Sérieusement?','Bon..','Vous y arrivez?');
+                if (isset($_GET['error']) && $_GET['error'] == 'badPassword') {
+
+                    $greet = array('Loupé..', 'Oh...', 'Raté..', 'Navrant..', 'Sérieusement?', 'Bon..', 'Vous y arrivez?');
                     $greet = $greet[array_rand($greet)];
-                    
                 }
 
-                if(isset($info)){
-                    if($info == 'accountCreated'){
+                if (isset($info)) {
+                    if ($info == 'accountCreated') {
                         $greet = 'Compte créé.';
                         echo '<p> Vous pouvez maintenant vous connecter </p>';
                     }
@@ -150,7 +147,7 @@ require_once("connection.php");
 
                 <?php
 
-                if(isset($info) && $info == 'disconnected'){
+                if (isset($info) && $info == 'disconnected') {
                     echo "<p> <br> Déconnexion effectuée avec succès.</p>";
                 }
 
@@ -180,8 +177,8 @@ require_once("connection.php");
 
 
                             <input id="usrname" <?php if (isset($_COOKIE['username'])) {
-                                echo "value=$_COOKIE[username]";} ?> placeholder="Avec un vrai système de login!" type="text" name="username"
-                                class="txtBox">
+                                                    echo "value=$_COOKIE[username]";
+                                                } ?> placeholder="Avec un vrai système de login!" type="text" name="username" class="txtBox">
                         </div>
 
                         <div class="labelUsr">
@@ -233,7 +230,7 @@ require_once("connection.php");
 
             <footer>
                 <div class="about">
-                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.0</a>
+                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.1</a>
 
 
                 </div>

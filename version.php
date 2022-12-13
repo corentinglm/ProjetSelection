@@ -30,7 +30,7 @@
         <ul class="navlinks">
             
             <li><a href="../">Retour</a></li>
-            <li>Infinite Amethyst 1.0</li>
+            <li>Infinite Amethyst 1.1</li>
         </ul>
 
 
@@ -45,17 +45,17 @@
 
         <div class="about">
             
-        <h1>V1.0  - 'The Final Update'</h1>
+        <h1>V1.1 - 'The Final Update'</h1>
         <p>
             <br>
             
-            Infinite Amethyst 1.0 permet de gérer sa complétion de grilles Parcoursup avec une aisance jamais atteinte au cours de l'histoire de l'humanité.
+            Infinite Amethyst permet de gérer sa complétion de grilles Parcoursup avec une aisance jamais atteinte au cours de l'histoire de l'humanité.
             <br>
             <br>
             Son interface épurée et son système de sécurité (que la CIA essaye de pirater depuis 3 semaines, en vain), vous garantissent un confort d'utilisation absolument spectaculaire.
             <br>
             <br>
-            Et ça... ça c'est bien... c'est un peu la rançon de la gloire... et ça c'est bien!
+            Version 1.1 : Refonte du système de login, ajouts des classes.
             <br>
             <br>
             <br>

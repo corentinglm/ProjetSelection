@@ -10,7 +10,7 @@ require_once("connection.php");
 
 $sql = "INSERT INTO eleve (`nom`, `prenom`, `bac`, `travail`, `absences`,`attitude`,`etudes`,`avis_pp`,`avis_prov`,`lettre`,`remarques`,`note`) VALUES (:nom, :prenom, :bac, :travail, :absences,:attitude,:etudes,:avis_pp,:avis_prov,:lettre,:remarques,:note)";
 
-$res=$conn->prepare($sql);
+$res = $conn->prepare($sql);
 
 
 //  values
@@ -33,16 +33,16 @@ $etudes = $_POST['etudesSup'];
 $avis_pp = $_POST['avisPP'];
 $avis_prov = $_POST['avisProv'];
 $lettre = $_POST['lettreMotiv'];
-$remarques = $_POST['remarques']." "."( Ligne ajoutée par {$complete_name} )";
+$remarques = $_POST['remarques'] . " " . "( Ligne ajoutée par {$complete_name} )";
 
 
 $note = $_POST['note'];
 
 // execute with values 
 
-try{
-$res->execute(array(':nom'=>$nom, ':prenom'=>$prenom,':bac'=>$bac,':travail'=>$travail,':absences'=>$absences,':attitude'=>$attitude,':etudes'=>$etudes,':avis_pp'=>$avis_pp,':avis_prov'=>$avis_prov,':lettre'=>$lettre,':remarques'=>$remarques,':note'=>$note, ));
-} catch(PDOException){
+try {
+    $res->execute(array(':nom' => $nom, ':prenom' => $prenom, ':bac' => $bac, ':travail' => $travail, ':absences' => $absences, ':attitude' => $attitude, ':etudes' => $etudes, ':avis_pp' => $avis_pp, ':avis_prov' => $avis_prov, ':lettre' => $lettre, ':remarques' => $remarques, ':note' => $note,));
+} catch (PDOException) {
     header('location: ../make?action=see-table&error=empty');
     exit();
 }
@@ -54,11 +54,3 @@ $res->execute(array(':nom'=>$nom, ':prenom'=>$prenom,':bac'=>$bac,':travail'=>$t
 //  inserting values 
 
 header('Location: make?action=see-table');
-
-
-
-
-
-
-
-?>

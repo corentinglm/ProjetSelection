@@ -11,10 +11,10 @@ session_start();
 // SecuritySystem.
 
 
-    if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
-        header('location: ../login');
-        exit();
-    }
+if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
+    header('location: ../login');
+    exit();
+}
 
 
 
@@ -55,15 +55,6 @@ if (isset($_POST["username"]) && isset($_POST["surname"]) && isset($_POST["name"
 
     // redirection
     header('location: make?action=see-accounts');
-
 } else {
     header('location: make?action=add-user-account&error=empty');
-
 }
-
-
-
-
-
-
-?>

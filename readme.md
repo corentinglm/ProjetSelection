@@ -1,8 +1,6 @@
 Infinite Amethyst 1.0 ( The Final Update )
 by corentin guillaume - Sept. 2022 - Déc. 2022
 
-Enfin sur Git!
-
 IP ( Egnom ) : https://10.0.52.85/
 
 
@@ -10,6 +8,16 @@ IP ( Egnom ) : https://10.0.52.85/
 -Système de création de compte
 -Corrections de bugs
 -Ajouts des dernières fonctionnalités
+
+
+Infinite Amethyst 1.1
+
+- Refonte du système de login:
+    - Le système est maintenant plus efficace et rapide, en utilisant moins de conditions
+
+- Ajout des classes:
+    - Les classes Users et Database gèrent intégralement le système de connexion, de gestion de cookies, et 
+
 
 
 

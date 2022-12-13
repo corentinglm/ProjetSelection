@@ -18,65 +18,66 @@
 
     <?php
 
-// SecuritySystem
+    // SecuritySystem
 
     session_start();
 
-if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
-    header('location: ../login');
-    exit();
-}
+    if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
+        header('location: ../login');
+        exit();
+    }
 
 
 
-// Je reprends la structure de modify user account
+    // Je reprends la structure de modify user account
 
-require_once('connection.php');
+    require_once('connection.php');
 
-// Inclusion du header
-include('homepages/prof/header.php');
-
-
-
-if (isset($_GET['id'])) {
-
-    $id = $_GET['id'];
-
-    $sql = "SELECT * FROM eleve WHERE id=:id";
-
-    $res = $conn->prepare($sql);
-    $res->execute(array(':id' => $id));
-
-
-    $data = $res->fetchAll(PDO::FETCH_ASSOC);
+    // Inclusion du header
+    include('homepages/prof/header.php');
 
 
 
-    // creating values
+    if (isset($_GET['id'])) {
 
-    //  error handling: on check si le tableau est vide, si oui donc dans else, on repart dans see-accounts
-    if ($data) {
-        foreach ($data as $v) {
+        $id = $_GET['id'];
 
-            $nom = $v["nom"];
-            $prenom = $v["prenom"];
-            $travail = $v["travail"];
-            $bac = $v["bac"];
-            $absences = $v["absences"];
-            $attitude = $v["attitude"];
-            $etudes = $v["etudes"];
-            $avis_pp = $v["avis_pp"];
-            $avis_prov = $v["avis_prov"];
-            $lettre = $v["lettre"];
-            $remarques = $v["remarques"];
-            $note = $v["note"];
-            $id = $v['id'];
-            $complete_name = $v["prenom"] . " " . $v["nom"];
+        $sql = "SELECT * FROM eleve WHERE id=:id";
+
+        $res = $conn->prepare($sql);
+        $res->execute(array(':id' => $id));
 
 
+        $data = $res->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+        // creating values
+
+        //  error handling: on check si le tableau est vide, si oui donc dans else, on repart dans see-accounts
+        if ($data) {
+            foreach ($data as $v) {
+
+                $nom = $v["nom"];
+                $prenom = $v["prenom"];
+                $travail = $v["travail"];
+                $bac = $v["bac"];
+                $absences = $v["absences"];
+                $attitude = $v["attitude"];
+                $etudes = $v["etudes"];
+                $avis_pp = $v["avis_pp"];
+                $avis_prov = $v["avis_prov"];
+                $lettre = $v["lettre"];
+                $remarques = $v["remarques"];
+                $note = $v["note"];
+                $id = $v['id'];
+                $complete_name = $v["prenom"] . " " . $v["nom"];
+            }
+        } else {
+            header('location: make?action=see-accounts');
         }
     } else {
-        header('location: make?action=see-accounts');
+        header('location: make?action=see-table');
     }
 
 
@@ -92,24 +93,7 @@ if (isset($_GET['id'])) {
 
 
 
-} else {
-    header('location: make?action=see-table');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
+    ?>
 
     <div class="menu">
 
@@ -180,15 +164,15 @@ if (isset($_GET['id'])) {
                     <p>Travail Sérieux</p>
 
                     <?php
-                if ($travail == 'Oui') {
-                    echo '<span>Oui (+1)<input value="Oui" type="radio" name="travail" id="" checked ></span>';
-                    echo '<span>Non (-1)<input value="Non" type="radio" name="travail"></span>';
-                } else {
-                    echo '<span>Oui (+1)<input value="Oui" type="radio" name="travail" id=""  ></span>';
-                    echo '<span>Non (-1)<input value="Non" type="radio" name="travail" checked></span>';
-                }
+                    if ($travail == 'Oui') {
+                        echo '<span>Oui (+1)<input value="Oui" type="radio" name="travail" id="" checked ></span>';
+                        echo '<span>Non (-1)<input value="Non" type="radio" name="travail"></span>';
+                    } else {
+                        echo '<span>Oui (+1)<input value="Oui" type="radio" name="travail" id=""  ></span>';
+                        echo '<span>Non (-1)<input value="Non" type="radio" name="travail" checked></span>';
+                    }
 
-                ?>
+                    ?>
 
 
 
@@ -201,7 +185,6 @@ if (isset($_GET['id'])) {
                     if ($absences == 'Oui') {
                         echo '<span>Oui (-2 ou dossier refusé )<input type="radio" value="Oui" name="absence" checked id=""></span>';
                         echo '<span>Non (+1)<input type="radio" name="absence" value="Non" id=""></span>';
-
                     } else {
                         echo '<span>Oui (-2 ou dossier refusé )<input type="radio" value="Oui" name="absence"  id=""></span>';
                         echo '<span>Non (+1)<input type="radio" checked name="absence" value="Non" id=""></span>';
@@ -218,7 +201,6 @@ if (isset($_GET['id'])) {
                     if ($attitude == 'Oui') {
                         echo '<span>Oui ( dossier refusé !! )<input checked type="radio" value="Oui" name="attitude" id=""></span>';
                         echo '<span>Non ( +1 )<input type="radio" name="attitude" value="Non" id=""></span>';
-
                     } else {
                         echo '<span>Oui ( dossier refusé !! )<input  type="radio" value="Oui" name="attitude" id=""></span>';
                         echo '<span>Non ( +1 )<input checked type="radio" name="attitude" value="Non" id=""></span>';
@@ -237,7 +219,6 @@ if (isset($_GET['id'])) {
                     if ($etudes == 'Oui') {
                         echo '<span>Oui (+1)<input type="radio" name="etudesSup" checked value="Oui" id=""></span>';
                         echo '<span>Non (+0)<input type="radio" name="etudesSup"value="Non" id=""></span>';
-
                     } else {
                         echo '<span>Oui (+1)<input type="radio" name="etudesSup" value="Oui" id=""></span>';
                         echo '<span>Non (+0)<input type="radio" name="etudesSup" checked value="Non" id=""></span>';
@@ -253,24 +234,22 @@ if (isset($_GET['id'])) {
 
 
                     <span>B (+2)<input value="Bien" <?php if ($avis_pp == 'Bien') {
-                        echo 'checked';
-                    } ?> type="radio"
-                        name="avisPP" id=""></span>
+                                                        echo 'checked';
+                                                    } ?> type="radio" name="avisPP" id=""></span>
 
                     <span>AB (+1) <input type="radio" value="Assez bien" <?php if ($avis_pp == 'Assez bien') {
-                        echo
-                            'checked';
-                    } ?> name="avisPP" id=""></span>
+                                                                                echo
+                                                                                'checked';
+                                                                            } ?> name="avisPP" id=""></span>
 
                     <span>Insuf. (-1)<input type="radio" name="avisPP" <?php if ($avis_pp == 'Insuf.') {
-                        echo 'checked';
-                    } ?>
-                        value="Insuf." id=""></span>
+                                                                            echo 'checked';
+                                                                        } ?> value="Insuf." id=""></span>
 
                     <span>Négatif (-2)<input type="radio" name="avisPP" <?php if ($avis_pp == 'Négatif') {
-                        echo 'checked';
-                    }
-                            ?> value="Négatif" id=""></span>
+                                                                            echo 'checked';
+                                                                        }
+                                                                        ?> value="Négatif" id=""></span>
 
 
 
@@ -284,21 +263,17 @@ if (isset($_GET['id'])) {
 
                     <p>Avis Proviseur</p>
                     <span>B (+2)<input type="radio" value="Bien" <?php if ($avis_prov == 'Bien') {
-                        echo 'checked';
-                    } ?>
-                        name="avisProv" id="avisProv"></span>
+                                                                        echo 'checked';
+                                                                    } ?> name="avisProv" id="avisProv"></span>
                     <span>AB (+1)<input value="Assez bien" <?php if ($avis_prov == 'Assez bien') {
-                        echo 'checked';
-                    } ?>
-                        type="radio" name="avisProv" value="2" id=""></span>
+                                                                echo 'checked';
+                                                            } ?> type="radio" name="avisProv" value="2" id=""></span>
                     <span>Insuf. (-1)<input type="radio" <?php if ($avis_prov == 'Insuf.') {
-                        echo 'checked';
-                    } ?>
-                        name="avisProv" value="Insuf." id=""></span>
+                                                                echo 'checked';
+                                                            } ?> name="avisProv" value="Insuf." id=""></span>
                     <span>Négatif (-2)<input type="radio" <?php if ($avis_prov == 'Négatif') {
-                        echo 'checked';
-                    } ?>
-                        name="avisProv"value="Négatif" id=""></span>
+                                                                echo 'checked';
+                                                            } ?> name="avisProv" value="Négatif" id=""></span>
 
 
 
@@ -312,24 +287,22 @@ if (isset($_GET['id'])) {
                     </p>
 
                     <span>B (+2)<input value="Bien" <?php if ($lettre == 'Bien') {
-                        echo 'checked';
-                    } ?> type="radio"
-                        name="lettreMotiv" id=""></span>
+                                                        echo 'checked';
+                                                    } ?> type="radio" name="lettreMotiv" id=""></span>
 
                     <span>AB (+1)<input type="radio" value="Assez bien" type="radio" name="lettreMotiv" <?php
-                            if ($lettre == 'Assez bien') {
-                        echo 'checked';
-                    } ?> id=""></span>
+                                                                                                        if ($lettre == 'Assez bien') {
+                                                                                                            echo 'checked';
+                                                                                                        } ?> id=""></span>
 
                     <span>Insuf. (-1)<input type="radio" <?php if ($lettre == 'Insuf.') {
-                        echo 'checked';
-                    } ?>
-                        name="lettreMotiv" value="Insuf." id=""></span>
+                                                                echo 'checked';
+                                                            } ?> name="lettreMotiv" value="Insuf." id=""></span>
 
                     <span>Négatif (-2)<input type="radio" value="Négatif" <?php if ($lettre == 'Négatif') {
-                        echo 'checked';
-                    }
-                            ?> type="radio" name="lettreMotiv" id=""></span>
+                                                                                echo 'checked';
+                                                                            }
+                                                                            ?> type="radio" name="lettreMotiv" id=""></span>
 
 
 
@@ -337,7 +310,7 @@ if (isset($_GET['id'])) {
                 <div class="title">
                     <p>Remarques</p>
                     <input id="txt1" type="text" placeholder="Remarques" name="remarques" <?php echo
-                        "value={$remarques}"; ?> >
+                                                                                            "value={$remarques}"; ?>>
 
 
 
