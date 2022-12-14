@@ -42,7 +42,7 @@ $data = $res->fetchAll(PDO::FETCH_ASSOC);
         <table class="tableau">
 
             <b>Ajouter ou supprimer des comptes...</b>
-            <a id="add" href="../make?action=add-user-account">Cliquez ici pour ajouter un nouveau compte</a>
+            <a id="add" href="./make?action=add-user-account">Cliquez ici pour ajouter un nouveau compte</a>
 
 
             <thead>

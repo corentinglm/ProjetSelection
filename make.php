@@ -76,6 +76,11 @@ if (isset($_SESSION['role'])) {
                         include('./pages/newGrille.php');
                         break;
 
+                    case 'logs':
+                        include("./homepages/admin/header.php");
+                        include('./pages/interfaceLogs.php');
+                        break;
+
                     default:
                         header('location: errors/error404.php');
                 }

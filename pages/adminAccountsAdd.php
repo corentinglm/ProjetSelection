@@ -42,7 +42,7 @@ if(isset($_GET['error'])){
         <div class="container">
 
 
-            <form action="../add-user-account.php" method="post">
+            <form action="./add-user-account.php" method="post">
                 <div class="title">
                     <p>Nom et prénom</p>
                     <input type="text" name="surname" placeholder="Prénom">
@@ -63,7 +63,7 @@ if(isset($_GET['error'])){
                 
 
             </div>
-            <div class=" title">
+            <div class="title">
                     <p>Rôle</p>
                     <span>Admin<input type="radio" name="role" value="admin" id=""></span>
                     <span>Secrétaire<input type="radio" name="role" value="secretaire" id=""></span>

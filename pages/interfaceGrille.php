@@ -39,7 +39,7 @@ $data = $res->fetchAll(PDO::FETCH_ASSOC);
                     echo '(Erreur: Une ligne vide, au moins.)';}?>
             </b>
                 
-                <a id="add" href="../make?action=new-row">Cliquez ici pour ajouter une nouvelle grille</a>
+                <a id="add" href="./make?action=new-row">Cliquez ici pour ajouter une nouvelle grille</a>
             <thead>
                 <tr>
 
