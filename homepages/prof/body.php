@@ -140,8 +140,7 @@ $toComplete =  $totalEleve - count($data);
                 <a href="./make?action=see-ranking">Consulter le classement</a>
             </div>
 
-            <div class="title">Paramètres de mon compte</div>
-            <div class="buttonContinue"><a href="./indev.php">Gérer mon compte</a></div>
+            
 
 
         </div>
