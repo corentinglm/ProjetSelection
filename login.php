@@ -21,10 +21,12 @@
 
 
     // vérification de la database
-require('./classes/database.php');
+    require('./classes/database.php');
     new Database();
 
-
+    // 
+    session_start();
+    session_destroy();
 
     ?>
 
@@ -60,15 +62,6 @@ require('./classes/database.php');
         } else {
             $info = '';
         }
-
-
-
-        // J'ai eu des problèmes de session en double donc je vais considérer que si l'utilisateur attérit sur cette page c'est qu'il n'a pas de session et par conséquent on va la destroy pour etre bien sur
-
-        session_start();
-        session_destroy();
-
-
 
 
         ?>

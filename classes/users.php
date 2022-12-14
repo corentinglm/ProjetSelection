@@ -1,6 +1,6 @@
 <?php
 
-require('database.php');
+require_once('database.php');
 
 class Users
 {
@@ -57,7 +57,8 @@ class Users
         $_SESSION['complete-name'] = $res['prenom'] . ' ' . $res['nom'];
         $_SESSION['session'] = session_id();
 
-        return;
+        // returns ID 
+        return $res['ID'];
     }
 
     public function setCookies($username)
@@ -75,5 +76,17 @@ class Users
         setcookie('surname', $res['prenom'], time() + (86400 * 30), "/");
     }
 
-    
+    public function getData($username)
+    {
+
+        // Pour le moment, on récupére l'IP
+        //  todo: récupérer les données du navigateur
+
+        $sql = 'UPDATE users SET ip=:ip WHERE username=:user';
+        $query = $this->db->prepare($sql);
+
+        // getting IP
+        $ip = getenv("REMOTE_ADDR");
+        $query->execute(array(':ip' => $ip, ':user' => $username));
+    }
 }

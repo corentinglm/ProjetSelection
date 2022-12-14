@@ -16,12 +16,13 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
 
     $login = (new Users())->passwordVerification($username, $password);
-    
-    
+
+
     if ($login) {
-        
+
         $role = (new Users())->getRole($username);
         (new Users)->createSession($username);
+        (new Users)->getData($username);
         (new Users())->setCookies($username);
         header('location: ./');
     } else {
