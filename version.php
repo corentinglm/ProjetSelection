@@ -29,8 +29,8 @@
 
         <ul class="navlinks">
             
-            <li><a href="../">Retour</a></li>
-            <li>Infinite Amethyst 1.1.1</li>
+            <li><a href="./">Retour</a></li>
+            <li>Infinite Amethyst 1.2</li>
         </ul>
 
 
@@ -45,7 +45,7 @@
 
         <div class="about">
             
-        <h1>V1.1.1 - 'The Final Update'</h1>
+        <h1>V1.2 - 'California'</h1>
         <p>
             <br>
             
@@ -55,7 +55,7 @@
             Son interface épurée et son système de sécurité (que la CIA essaye de pirater depuis 3 semaines, en vain), vous garantissent un confort d'utilisation absolument spectaculaire.
             <br>
             <br>
-            Version 1.1 : Refonte du système de login, ajouts des classes.
+            Version 1.2 : Bug fixes & Ajout d'un système de logs.
             <br>
             <br>
             <br>

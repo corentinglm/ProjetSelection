@@ -5,7 +5,8 @@ session_start();
 
 // Refonte totale du système de login
 
-require('classes/users.php');
+require_once('classes/users.php');
+require_once('classes/logs.php');
 
 
 
@@ -24,6 +25,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         (new Users)->createSession($username);
         (new Users)->getData($username);
         (new Users())->setCookies($username);
+        // IP tracking & logs 
+        (new Logs())->handleLogin();
+
         header('location: ./');
     } else {
         // Invalid Password

@@ -50,7 +50,7 @@ $data = $res->fetchAll(PDO::FETCH_ASSOC);
 
                     <th>ID</th>
                     <th>Rôle</th>
-                    <th>Password</th>
+                    <th>Adresse IP</th>
                     <th>Username</th>
                     <th>Nom</th>
                     <th>Prénom</th>
@@ -73,7 +73,7 @@ $data = $res->fetchAll(PDO::FETCH_ASSOC);
 
         <td>" . $v["ID"] . "</td>
         <td>" . $v["role"] . "</td>
-        <td>" . $v["password"] . "</td>
+        <td>" . $v["ip"] . "</td>
         <td>" . $v["username"] . "</td>
         <td>" . $v["nom"] . "</td>
         <td>" . $v["prenom"] . "</td>

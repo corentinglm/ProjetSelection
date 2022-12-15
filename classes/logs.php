@@ -6,7 +6,7 @@ require_once('database.php');
 
 //  Gère l'ajout d'IP à la database
 
-class IP
+class Logs
 {
 
     private $ip;
@@ -26,7 +26,7 @@ class IP
         return $this->ip;
     }
 
-    public function service()
+    public function handleLogin()
     {
         $this->register();
         $this->log();
@@ -48,12 +48,23 @@ class IP
 
     public function log()
     {
-        $sql = 'INSERT INTO  `logs` VALUES (:target,:date)';
+        $sql = 'INSERT INTO  `logs` VALUES (:target,:account,:date,"Connection au site")';
         $query = $this->db->prepare($sql);
 
         // initializing date
         $date = date('d-m-y h-m-s');
 
-        $query->execute(array(':target' => $this->getIP(), ':date' => $date));
+        $query->execute(array(':target' => $this->getIP(), ':date' => $date, ':account' => $_SESSION['complete-name']));
+    }
+
+    public function handleLogout()
+    {
+        $sql = 'INSERT INTO  `logs` VALUES (:target,:account,:date,"Déconnexion")';
+        $query = $this->db->prepare($sql);
+
+        // initializing date
+        $date = date('d-m-y h-m-s');
+
+        $query->execute(array(':target' => $this->getIP(), ':date' => $date, ':account' => $_COOKIE['complete-name']));
     }
 }

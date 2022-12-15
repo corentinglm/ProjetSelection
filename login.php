@@ -64,6 +64,12 @@
         }
 
 
+
+        // Splash screen
+        $splash = array("Think different", "California dreaming", "Vive la République","ProjetSelection","Kernel Panic","hello (again)","Welcome to the machine");
+
+        $splash = $splash[array_rand($splash)];
+
         ?>
 
 
@@ -76,7 +82,7 @@
             <div class="logo">
                 <div class="tilt">
                     <p id="subtitle">
-                        Loading...
+                        <?php echo $splash ?>
                     </p>
                 </div>
                 <img src="assets/logos/IAlogo.png" id="logo" alt="" srcset="">
@@ -225,7 +231,9 @@
 
             <footer>
                 <div class="about">
-                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.1.1</a>
+                    <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.2</a>
+                    <br>
+                    <a href="https://github.com/corentinglm/ProjetSelection">Github</a>
 
 
                 </div>

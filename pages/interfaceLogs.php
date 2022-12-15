@@ -21,7 +21,7 @@
 
     require_once("connection.php");
 
-    $sql = "SELECT * FROM logs";
+    $sql = "SELECT * FROM logs ORDER BY date DESC";
 
     $res = $conn->prepare($sql);
     $res->execute();
@@ -33,23 +33,23 @@
         <table class="tableau">
 
             <b>Consulter les logs
-                
+
                 <?php if (isset($_GET['error']) && $_GET['error'] == 'empty') {
                     echo '(Erreur: Une ligne vide, au moins.)';
                 } ?>
-                
+
             </b>
-            
+
 
             <a id="add" href="./delete-logs.php">Supprimer les logs</a>
             <thead>
                 <tr>
 
                     <th>IP</th>
+                    <th>Compte</th>
                     <th>Date</th>
-                    <th>Prénom</th>
-                    <th>Nom</th>
-                    
+                    <th>Action</th>
+
 
 
                 </tr>
@@ -71,7 +71,9 @@
                     "<tr>
     
     <td>" . $v["ip"] . "</td>
+    <td>" . $v["account"] . "</td>
     <td>" . $v["date"] . "</td>
+    <td>" . $v["action"] . "</td>
     
     
 

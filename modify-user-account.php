@@ -24,15 +24,15 @@ session_start();
 // SecuritySystem
 
 if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
-    header('location: ../login');
+    header('location: ./login');
     exit();
 }
 
 
 // including header
-include('homepages/admin/header.php');
+include('./homepages/admin/header.php');
 
-require_once('connection.php');
+require_once('./connection.php');
 
 if (isset($_GET['id'])) {
 
@@ -63,7 +63,7 @@ if (isset($_GET['id'])) {
 
         }
     } else {
-        header('location: make?action=see-accounts');
+        header('location: ./make?action=see-accounts');
     }
 
 
@@ -80,7 +80,7 @@ if (isset($_GET['id'])) {
 
 
 } else {
-    header('location: make?action=see-table');
+    header('location: ./make?action=see-table');
 }
 
 
@@ -103,7 +103,7 @@ if (isset($_GET['id'])) {
         <div class="container">
 
 
-            <form action="../submit-user.php" method="post">
+            <form action="./submit-user.php" method="post">
                 <div class="title">
                     <p>Nom et prénom </p>
                     <input type="text" name="name" <?php echo "value={$nom}"; ?> placeholder="Nom">

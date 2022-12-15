@@ -23,7 +23,7 @@
     session_start();
 
     if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
-        header('location: ../login');
+        header('location: ./login');
         exit();
     }
 
@@ -31,10 +31,10 @@
 
     // Je reprends la structure de modify user account
 
-    require_once('connection.php');
+    require_once('./connection.php');
 
     // Inclusion du header
-    include('homepages/prof/header.php');
+    include('./homepages/prof/header.php');
 
 
 
@@ -74,10 +74,10 @@
                 $complete_name = $v["prenom"] . " " . $v["nom"];
             }
         } else {
-            header('location: make?action=see-accounts');
+            header('location: ./make?action=see-accounts');
         }
     } else {
-        header('location: make?action=see-table');
+        header('location: ./make?action=see-table');
     }
 
 
@@ -103,7 +103,7 @@
         </b>
         <a href="../make?action=see-table">Retour</a>
 
-        <form action="submit-eleve" method="POST">
+        <form action="./submit-eleve" method="POST">
             <div class="container">
                 <div class="title">
                     <p>Nom et prénom</p>

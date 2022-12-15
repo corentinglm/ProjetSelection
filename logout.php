@@ -1,7 +1,12 @@
 <?php
 
 
+require_once('./classes/logs.php');
+
 // * Handling loggin-out
+
+// LOGS
+(new Logs)->handleLogout();
 
 
 // destroying session: autologin caduc

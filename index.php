@@ -12,7 +12,7 @@
 <?php
 
 require_once('./classes/database.php');
-require_once('./classes/IP.php');
+require_once('./classes/logs.php');
 session_start();
 
 // Refonte totale du système de login, maintenant dans un fichier PHP à part.
@@ -20,10 +20,6 @@ session_start();
 
 // On vérifie si la base de données est accessible
 new Database();
-
-// IP tracking & logs 
-(new IP())->service();
-
 
 
 

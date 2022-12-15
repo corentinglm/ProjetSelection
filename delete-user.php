@@ -27,7 +27,6 @@ if (isset($_GET['id'])) {
     $res = $conn->prepare($sql);
     $res->execute(array(':id' => $id));
 
-
     // redirection
     header("location: make?action=see-accounts");
 } else {

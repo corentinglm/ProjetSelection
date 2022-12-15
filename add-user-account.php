@@ -53,8 +53,11 @@ if (isset($_POST["username"]) && isset($_POST["surname"]) && isset($_POST["name"
 
     // UPDATE: ça marche.
 
+
+    
     // redirection
     header('location: make?action=see-accounts');
+
 } else {
     header('location: make?action=add-user-account&error=empty');
 }

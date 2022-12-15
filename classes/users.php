@@ -89,4 +89,8 @@ class Users
         $ip = getenv("REMOTE_ADDR");
         $query->execute(array(':ip' => $ip, ':user' => $username));
     }
+
+    public function getCompleteName(){
+        
+    }
 }
