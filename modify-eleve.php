@@ -80,19 +80,6 @@
         header('location: ./make?action=see-table');
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     ?>
 
     <div class="menu">

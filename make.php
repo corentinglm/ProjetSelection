@@ -2,8 +2,6 @@
 
 session_start();
 
-
-
 // Page qui va servir de page tout en un comme index, mais cette fois pour accéder aux pages de modifications fin voilà quoi c'est super
 
 // SecuritySystem
@@ -13,8 +11,6 @@ if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
     header('location: ../login');
     exit();
 }
-
-
 
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == 'admin' or $_SESSION['role'] == 'secretaire' or $_SESSION['role'] == 'prof') {

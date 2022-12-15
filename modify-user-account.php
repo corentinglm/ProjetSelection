@@ -66,19 +66,6 @@ if (isset($_GET['id'])) {
         header('location: ./make?action=see-accounts');
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 } else {
     header('location: ./make?action=see-table');
 }
@@ -99,9 +86,7 @@ if (isset($_GET['id'])) {
         </b>
         <a href="make?action=see-accounts">Retour</a>
 
-
         <div class="container">
-
 
             <form action="./submit-user.php" method="post">
                 <div class="title">

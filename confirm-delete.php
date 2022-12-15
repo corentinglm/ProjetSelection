@@ -28,16 +28,12 @@
         exit();
     }
 
-
     require_once("connection.php");
-
 
     $sql = "SELECT * FROM eleve WHERE id=:id";
 
     $res = $conn->prepare($sql);
     $res->execute(array(':id' => $_GET['id']));
-
-
 
     $data = $res->fetch(PDO::FETCH_ASSOC);
 
@@ -48,7 +44,6 @@
     }
 
     ?>
-
 
     <div class="welcome">
         <div class="mainTitle">Confirmer la suppression?</div>
@@ -66,32 +61,10 @@
 
         </div>
 
-
-
-
-
-
-
-
     </div>
 
-
-
-
-
-
     </div>
-
-
-
-
     </section>
-
-
-
-
-
-
 
 </body>
 

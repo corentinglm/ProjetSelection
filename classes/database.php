@@ -2,6 +2,8 @@
 
 class Database
 {
+
+    // Changez aussi connection.php dans la racine.
     private $dbUsername = 'guillaume';
     private $dbPassword = 'guillaume1337';
     private $dbserv = 'localhost';

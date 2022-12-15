@@ -25,11 +25,7 @@
 
             <li><a href="about.html">Retour</a></li>
         </ul>
-
-
     </header>
-
-
 
     <div class="welcome">
         <div class="mainTitle">Changelog.</div>
@@ -43,25 +39,11 @@
                 <li>- Ajout du Dark Mode.</li>
                 <li>- Ajout de la page "Changelog"</li>
 
-
-
-
-
             </ul>
             <h2>Bugfixes:</h2>
             <ul>
                 <li>- Correction d'un bug dans lequel il était impossible de scroll dans la page Changelog</li>
-
-
             </ul>
-
-
-
-
-
-
-
-
 
         </div>
         <a href="about.html">Retour vers "A propos"</a>
@@ -73,14 +55,7 @@
     </div>
 
     <div class="img"><img src="assets/changelog1.0.png" alt=""></div>
-
-
-
-
-
     </section>
-
-
 
     <footer>Egnom 2022-23 >>> DEBUG
         <ul>

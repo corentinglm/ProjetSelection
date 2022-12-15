@@ -18,8 +18,6 @@
 <body>
 
     <?php
-
-
     // vérification de la database
     require('./classes/database.php');
     new Database();
@@ -29,7 +27,6 @@
     session_destroy();
 
     ?>
-
 
     <body>
 
@@ -63,17 +60,12 @@
             $info = '';
         }
 
-
-
         // Splash screen
         $splash = array("Think different", "California dreaming", "Vive la République","ProjetSelection","Kernel Panic","hello (again)","Welcome to the machine");
 
         $splash = $splash[array_rand($splash)];
 
         ?>
-
-
-
 
         <section class="left">
 

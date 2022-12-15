@@ -16,8 +16,6 @@ if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
     exit();
 }
 
-
-
 if (isset($_GET['id'])) {
 
     $id = $_GET["id"];

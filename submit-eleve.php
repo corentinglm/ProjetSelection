@@ -6,17 +6,14 @@
 require_once('connection.php');
 session_start();
 
-
-
 // SecuritySystem
 
-if( !isset($_SESSION['session']) or $_SESSION['session'] != session_id()){
+if (!isset($_SESSION['session']) or $_SESSION['session'] != session_id()) {
     header('location: ../login');
     exit();
 }
 
 if (isset($_POST['id'])) {
-
 
     $sql = 'UPDATE eleve SET prenom=:prenom, nom=:nom, bac=:bac, travail=:travail, absences=:absences, attitude=:attitude, etudes=:etudes, avis_pp=:avis_pp, avis_prov=:avis_prov, lettre=:lettre, remarques=:remarques, note=:note WHERE id=:id';
     $res = $conn->prepare($sql);
@@ -37,13 +34,7 @@ if (isset($_POST['id'])) {
     $id = $_POST['id'];
     $remarques = $_POST['remarques'] . " " . "( Ligne ajoutée par {$complete_name} )";
 
-
     $res->execute(array(':prenom' => $prenom, ':nom' => $nom, ':bac' => $bac, ':travail' => $travail, ':absences' => $absences, ':attitude' => $attitude, ':etudes' => $etudes, ':avis_pp' => $avis_pp, ':avis_prov' => $avis_prov, ':lettre' => $lettre, ':remarques' => $remarques, ':note' => $note, ':id' => $id));
 
     header('location: make?action=see-table');
-
-
-
 }
-
-?>

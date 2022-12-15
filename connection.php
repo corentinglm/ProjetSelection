@@ -5,6 +5,8 @@
 
 // Le login se fait maintenant avec les classes Database et Users
 
+// Changez aussi classes/database.php
+
 
 $dbUsername = 'guillaume';
 $dbPassword = 'guillaume1337';

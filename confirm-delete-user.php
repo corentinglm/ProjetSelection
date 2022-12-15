@@ -28,18 +28,12 @@
         exit();
     }
 
-
-
     require_once("connection.php");
-
-
 
     $sql = "SELECT * FROM users WHERE id=:id";
 
     $res = $conn->prepare($sql);
     $res->execute(array(':id' => $_GET['id']));
-
-
 
     $data = $res->fetch(PDO::FETCH_ASSOC);
 
@@ -49,9 +43,7 @@
         //  si pas d'id alors on considère que la ligne n'existe pas alors on renvoie juste vers le menu pour "gérer" l'erreur, ouais bref
         header("location: make?action=see-accounts");
     }
-
     ?>
-
 
     <div class="welcome">
         <div class="mainTitle">Confirmer la suppression?</div>
@@ -69,32 +61,11 @@
 
         </div>
 
-
-
-
-
-
-
-
     </div>
 
-
-
-
-
-
     </div>
-
-
-
 
     </section>
-
-
-
-
-
-
 
 </body>
 

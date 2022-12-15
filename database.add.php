@@ -12,9 +12,7 @@ $sql = "INSERT INTO eleve (`nom`, `prenom`, `bac`, `travail`, `absences`,`attitu
 
 $res = $conn->prepare($sql);
 
-
 //  values
-
 
 // true variables
 // TODO: A RETESTER = IL FAUT CHANGER LES OPTIONS EN LANGUAGE HUMAIN LOL

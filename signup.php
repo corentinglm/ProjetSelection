@@ -17,13 +17,12 @@
 
 <body>
 
-<?php 
+    <?php
 
+    // Offline ( Comment to activate signup system )
+    header('location: ../errors/indev.php');
 
-// Offline ( Comment to activate signup system )
-header('location: ../errors/indev.php');
-
-?>
+    ?>
 
     <body>
 
@@ -36,7 +35,7 @@ header('location: ../errors/indev.php');
                     alert("Cannot be empty");
                     return false;
                 }
-            } 
+            }
         </script>
 
 
@@ -44,49 +43,29 @@ header('location: ../errors/indev.php');
 
 
         // obtention des deux GET, info ou error
-        
+
         if (isset($_GET['error'])) {
             $get = $_GET['error'];
         } else {
             $get = '';
         }
 
-
-
-
         // J'ai eu des problèmes de session en double donc je vais considérer que si l'utilisateur attérit sur cette page c'est qu'il n'a pas de session et par conséquent on va la destroy pour etre bien sur
-        
+
         session_start();
         session_destroy();
-
-
-
-
         ?>
 
-
-
-
         <section class="left">
-
-
-
             <section class="text1">
-
-
-
                 <?php
-
                 $greet = 'Inscrivez-vous !';
 
                 if (isset($_GET['error']) && $_GET['error'] == 'badPassword') {
                     echo 'TODO';
-
                 }
 
                 ?>
-
-
                 <p id="welcome">
                     <?php echo $greet ?>
                 </p>
@@ -104,26 +83,14 @@ header('location: ../errors/indev.php');
 
                 ?>
 
-
                 <hr>
-
-
 
                 <!-- la page principale n'est plus la page de login, mais index, index est la page de menu, mais redirige vers le login si l'user n'est pas connecté, j'exploiterais les sessions et cookies pour rester connecter, puis je ferais un système de login, et ce sera prêt, en ce qui concerne les différentes pages, je vais bricoler un peu un truc avec une méthode get -->
                 <form method="post" action="../signup-process.php">
-
-
-
-
                     <div class="contentBx">
-
-
                         <div class="inputBx">
 
-
-
-                            <input id="usrname" placeholder="Avec un vrai système de login!" type="text" name="username"
-                                class="txtBox">
+                            <input id="usrname" placeholder="Avec un vrai système de login!" type="text" name="username" class="txtBox">
                         </div>
 
                         <div class="labelUsr">
@@ -166,41 +133,24 @@ header('location: ../errors/indev.php');
                             </button>
                         </div>
 
-
-
-
-
                     </div>
 
                 </form>
 
             </section>
 
-
-
             <footer>
                 <div class="about">
                     <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.0 </a>
 
-
                 </div>
-
-
-
-
 
             </footer>
         </section>
-
-
-
         <section class="right">
             <img src="assets\rightPane.png" class="img">
 
         </section>
-
-
-
 
     </body>
 

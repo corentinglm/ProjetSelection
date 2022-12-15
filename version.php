@@ -15,81 +15,40 @@
 
 </head>
 
-<?php 
-
-
-
-?>
-
 <body>
-
     <header>
-
         <div class="logo">corentin.guillaume</div>
-
         <ul class="navlinks">
-            
+
             <li><a href="./">Retour</a></li>
             <li>Infinite Amethyst 1.2</li>
         </ul>
-
-
     </header>
-
-    
-
     <div class="welcome">
         <div class="mainTitle">Infinite Amethyst</div>
         <div class="subtitle">ProjetSelection - by Corentin Guillaume (2022)</div>
-        
+
 
         <div class="about">
-            
-        <h1>V1.2 - 'California'</h1>
-        <p>
-            <br>
-            
-            Infinite Amethyst permet de gérer sa complétion de grilles Parcoursup avec une aisance jamais atteinte au cours de l'histoire de l'humanité.
-            <br>
-            <br>
-            Son interface épurée et son système de sécurité (que la CIA essaye de pirater depuis 3 semaines, en vain), vous garantissent un confort d'utilisation absolument spectaculaire.
-            <br>
-            <br>
-            Version 1.2 : Bug fixes & Ajout d'un système de logs.
-            <br>
-            <br>
-            <br>
-            
 
-            
-            
+            <h1>V1.2 - 'California'</h1>
+            <p>
+                <br>
+
+                Infinite Amethyst permet de gérer sa complétion de grilles Parcoursup avec une aisance jamais atteinte au cours de l'histoire de l'humanité.
+                <br>
+                <br>
+                Son interface épurée et son système de sécurité (que la CIA essaye de pirater depuis 3 semaines, en vain), vous garantissent un confort d'utilisation absolument spectaculaire.
+                <br>
+                <br>
+                Version 1.2 : Bug fixes & Ajout d'un système de logs.
+                <br>
+                <br>
+                <br>
             </p>
-
-            
-            
-
-          
-           
-
         </div>
-
-        
-
-      
-
     </div>
-    
-   
     </section>
-
-    
-
-    
-    
-
-
-
-
 </body>
 
 </html>

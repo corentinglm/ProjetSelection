@@ -6,8 +6,6 @@ require_once('connection.php');
 
 session_start();
 
-
-
 try{
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['surname']) && isset($_POST['name'])) {
 

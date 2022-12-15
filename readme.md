@@ -37,6 +37,9 @@ Base de données incluse dans le dossier
 
 et accepté en SLAM! ;)
 
+# Infinite Amethyst 1.2
+
+-  Indentation, bug fixe, et système de logs
 
 
 
