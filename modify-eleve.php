@@ -88,7 +88,7 @@
         <b>Modifier une grille :
             <?php echo $complete_name ?>
         </b>
-        <a href="../make?action=see-table">Retour</a>
+        <a href="./make?action=see-table">Retour</a>
 
         <form action="./submit-eleve" method="POST">
             <div class="container">
@@ -291,32 +291,21 @@
                                                                             }
                                                                             ?> type="radio" name="lettreMotiv" id=""></span>
 
-
-
                 </div>
                 <div class="title">
                     <p>Remarques</p>
                     <input id="txt1" type="text" placeholder="Remarques" name="remarques" <?php echo
-                                                                                            "value={$remarques}"; ?>>
-
-
-
-
+                                                                                            "value='$remarques'"; ?>>
                 </div>
 
                 <div class="title">
                     <p>Note ( Sur 20 )</p>
                     <input type="number" id="note" name="note" min="0" max="20" <?php echo "value={$note}"; ?>>
 
-
-
-
                 </div>
 
                 <div class="button">
                     <button type="submit" name="submit">Mettre à jour l'élève</button>
-
-
 
                 </div>
 
