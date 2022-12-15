@@ -14,7 +14,9 @@ class Database
     {
 
         try {
-            $this->conn = new PDO("mysql:host=" . $this->dbserv . ";dbname=" . $this->dbName, $this->dbUsername, $this->dbPassword);
+            $this->conn = new PDO("mysql:host=" . $this->dbserv . ";dbname=" . $this->dbName.";charset=UTF8", $this->dbUsername, $this->dbPassword);
+
+            
         } catch (PDOException $e) {
             include('./errors/fatalError.php');
             die();

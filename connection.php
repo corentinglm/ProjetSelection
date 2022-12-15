@@ -14,7 +14,8 @@ $dbserv = 'localhost';
 $dbName = "projetselection";
 
 try {
-    $conn = new PDO("mysql:host=" . $dbserv . ";dbname=" . $dbName, $dbUsername, $dbPassword);
+
+    $conn = new PDO("mysql:host=" . $dbserv . ";dbname=" . $dbName . ";charset=UTF8", $dbUsername, $dbPassword);
 } catch (PDOException $e) {
     include('./errors/fatalError.php');
     exit();
