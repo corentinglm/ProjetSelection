@@ -61,7 +61,7 @@
         }
 
         // Splash screen
-        $splash = array("Think different", "California dreaming", "Vive la République","ProjetSelection","Kernel Panic","hello (again)","Welcome to the machine");
+        $splash = array("Think different", "California dreaming", "Vive la République", "ProjetSelection", "Kernel Panic", "hello (again)", "Welcome to the machine");
 
         $splash = $splash[array_rand($splash)];
 
@@ -151,10 +151,7 @@
 
                 ?>
 
-
                 <hr>
-
-
 
                 <!-- la page principale n'est plus la page de login, mais index, index est la page de menu, mais redirige vers le login si l'user n'est pas connecté, j'exploiterais les sessions et cookies pour rester connecter, puis je ferais un système de login, et ce sera prêt, en ce qui concerne les différentes pages, je vais bricoler un peu un truc avec une méthode get -->
                 <form method="post" action="./process.connection.php">
@@ -164,10 +161,7 @@
 
                     <div class="contentBx">
 
-
                         <div class="inputBx">
-
-
 
                             <input id="usrname" <?php if (isset($_COOKIE['username'])) {
                                                     echo "value=$_COOKIE[username]";
@@ -201,11 +195,8 @@
                             </button>
                         </div>
 
-
-
                         <div class="forgotPassword">
                             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Mot de passe oublié ?</a>
-
 
                         </div>
 
@@ -219,8 +210,6 @@
 
             </section>
 
-
-
             <footer>
                 <div class="about">
                     <a href="version">Corentin Guillaume - 2022 - Infinite Amethyst 1.2</a>
@@ -230,22 +219,13 @@
 
                 </div>
 
-
-
-
-
             </footer>
         </section>
-
-
 
         <section class="right">
             <img src="assets\rightPane.png" class="img">
 
         </section>
-
-
-
 
     </body>
 

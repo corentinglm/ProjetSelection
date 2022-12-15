@@ -31,7 +31,7 @@
 
         <div class="about">
 
-            <h1>V1.2 - 'California'</h1>
+            <h1>V1.2 - 'California' (15/12/2022)</h1>
             <p>
                 <br>
 
@@ -41,7 +41,7 @@
                 Son interface épurée et son système de sécurité (que la CIA essaye de pirater depuis 3 semaines, en vain), vous garantissent un confort d'utilisation absolument spectaculaire.
                 <br>
                 <br>
-                Version 1.2 : Bug fixes & Ajout d'un système de logs.
+                Version 1.2 : Beaucoup de bug fixes & Ajout d'un système de logs.
                 <br>
                 <br>
                 <br>
