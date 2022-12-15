@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 13, 2022 at 08:06 PM
+-- Generation Time: Dec 15, 2022 at 08:51 AM
 -- Server version: 8.0.31-0ubuntu0.22.04.1
 -- PHP Version: 8.1.2-1ubuntu2.9
 
@@ -67,6 +67,39 @@ INSERT INTO `eleve` (`id`, `nom`, `prenom`, `bac`, `travail`, `absences`, `attit
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ip`
+--
+
+CREATE TABLE `ip` (
+  `ip` int NOT NULL COMMENT 'IP',
+  `isBanned` tinyint(1) DEFAULT '0' COMMENT 'Is the IP banned?'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logs`
+--
+
+CREATE TABLE `logs` (
+  `ip` varchar(255) DEFAULT NULL COMMENT 'ip',
+  `account` varchar(255) DEFAULT NULL COMMENT 'account used',
+  `date` datetime DEFAULT NULL COMMENT 'date and time ',
+  `action` varchar(255) DEFAULT NULL COMMENT 'action made'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `logs`
+--
+
+INSERT INTO `logs` (`ip`, `account`, `date`, `action`) VALUES
+('10.0.51.6', 'Craig Federighi', '2015-12-22 08:12:31', 'Connection au site'),
+('10.0.51.6', 'Craig Federighi', '2015-12-22 08:12:35', 'Déconnexion'),
+('10.0.51.6', 'Charlie Guillaume', '2015-12-22 08:12:41', 'Connection au site');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `other`
 --
 
@@ -89,6 +122,8 @@ INSERT INTO `other` (`deadline`, `total_eleve`) VALUES
 --
 
 CREATE TABLE `users` (
+  `banned` tinyint(1) NOT NULL DEFAULT '0',
+  `ip` varchar(128) DEFAULT NULL COMMENT 'IP addr',
   `ID` int NOT NULL COMMENT 'User ID',
   `prenom` varchar(16) NOT NULL,
   `nom` varchar(16) NOT NULL,
@@ -101,11 +136,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `prenom`, `nom`, `username`, `password`, `role`) VALUES
-(18, 'Steve', 'Jobs', 'jobs', '$2y$10$zGfyTS7nEqUTZ7SzoiS9/u6.PAihtTBgMZ2OOLjDIXrB4FUO9lm1.', 'secretaire'),
-(19, 'Corentin', 'Guillaume', 'corentinglm', '$2y$10$VOkSiWogQlpaJnSz87ecL.WMPgSOdcfrWiN7gdejQ8m.jlom.pPcq', 'admin'),
-(22, 'Craig', 'Federighi', 'craig', '$2y$10$vkqVWeA0bO2D0KFmGtKtGOOnWuDXv/nP5.nYVbQ3PAVqB/A.lX7QO', 'prof'),
-(24, 'Charlie', 'Guillaume', 'charlie', '$2y$10$JGNwpsA7bdsYFDIT79nuFO5K8piaYbGStBorYtceISeH79tN4y/S2', 'admin');
+INSERT INTO `users` (`banned`, `ip`, `ID`, `prenom`, `nom`, `username`, `password`, `role`) VALUES
+(0, NULL, 18, 'Steve', 'Jobs', 'jobs', '$2y$10$zGfyTS7nEqUTZ7SzoiS9/u6.PAihtTBgMZ2OOLjDIXrB4FUO9lm1.', 'secretaire'),
+(0, NULL, 19, 'Corentin', 'Guillaume', 'corentinglm', '$2y$10$VOkSiWogQlpaJnSz87ecL.WMPgSOdcfrWiN7gdejQ8m.jlom.pPcq', 'admin'),
+(0, '10.0.51.6', 22, 'Craig', 'Federighi', 'craig', '$2y$10$vkqVWeA0bO2D0KFmGtKtGOOnWuDXv/nP5.nYVbQ3PAVqB/A.lX7QO', 'prof'),
+(0, '10.0.51.6', 24, 'Charlie', 'Guillaume', 'charlie', '$2y$10$JGNwpsA7bdsYFDIT79nuFO5K8piaYbGStBorYtceISeH79tN4y/S2', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -116,6 +151,12 @@ INSERT INTO `users` (`ID`, `prenom`, `nom`, `username`, `password`, `role`) VALU
 --
 ALTER TABLE `eleve`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ip`
+--
+ALTER TABLE `ip`
+  ADD PRIMARY KEY (`ip`);
 
 --
 -- Indexes for table `users`
