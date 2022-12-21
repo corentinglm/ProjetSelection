@@ -26,7 +26,7 @@ $complete_name
 
 
         <b>Ajouter une nouvelle grille...</b>
-        <a href="../make?action=see-table">Retour</a>
+        <a href="./make?action=see-table">Retour</a>
 
         <form action="../database.add" method="POST">
             <div class="container">
