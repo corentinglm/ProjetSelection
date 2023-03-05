@@ -39,7 +39,7 @@ et accepté en SLAM! ;)
 
 # Infinite Amethyst 1.2
 
--  Indentation, bug fixe, et système de logs
+-  Indentation, bug fixes, et système de logs
 
 
 
